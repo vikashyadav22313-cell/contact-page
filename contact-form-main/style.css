@@ -1,0 +1,133 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+font-family: "Karla", sans-serif;
+}
+:root{
+  --bgColor:hsl(148, 38%, 91%);
+  --main:hsl(0, 0%, 100%);
+  --highlight:hsl(169, 82%, 27%);
+  --focus:hsl(186, 15%, 59%);
+  --btn: hsl(187, 24%, 22%);
+  --error:hsl(0, 66%, 54%);
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-section{
+  width: 90%;
+  max-width: 50rem;
+  padding: 1.5rem;
+  height: auto;
+  background-color: var(--main);
+}
+.name{
+  margin-top: 1rem;
+  display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+.form-group{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.btn{
+  background-color: var(--highlight);
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid var(--highlight);
+  color: white;
+  font-family: "karla", sans-serif;
+  border-radius: 0.4rem;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+.input-field{
+  font-family: "karla",sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  min-height: 2.5rem;
+  outline: none;
+  border: 1px solid var(--focus);
+  border-radius: 0.4rem;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+.input-field:hover{
+  border: 1.5px solid var(--highlight);
+}
+.input-field:focus{
+  border: 2px solid var(--highlight);
+}
+
+.one-line{
+  padding: 0.5rem;
+}
+.query-group{
+  display: flex;
+  gap: 1rem;
+  
+}
+.success{
+  display: flex;
+  gap:0.5rem;
+}
+
+.message {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(187, 24%, 22%);
+  display: none;
+}
+
+.check-error,.radio-error{
+  display: none;
+  color: var(--error);
+}
+
+.query-area{
+  width: 100%;
+  border: 1px solid var(--focus);
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+.error{
+  color: var(--error);
+  display: none;
+}
+
+@media(max-width:765px){
+  .name{
+    flex-direction: column;
+  }
+  .query-group{
+    flex-direction: column;
+
+  }
+}
